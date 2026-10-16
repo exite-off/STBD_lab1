@@ -1,0 +1,18 @@
+[project]
+name = "fleet"
+version = "1.0.0"
+description = "Fleet management: Repository + Unit of Work over PostgreSQL procedures and views"
+requires-python = ">=3.14"
+dependencies = [
+    "psycopg[binary]>=3.2",
+]
+
+[project.scripts]
+fleet-demo = "fleet.__main__:main"
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["fleet*"]
